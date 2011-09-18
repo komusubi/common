@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jp.dip.komusubi</groupId>
+  <artifactId>common</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  	  <groupId>org.slf4j</groupId>
+  	  <artifactId>slf4j-api</artifactId>
+      <version>1.6.2</version>
+  	</dependency>
+  	<dependency>
+  	  <groupId>com.sun.mail</groupId>
+  	  <artifactId>javax.mail</artifactId>
+  	  <version>1.4.4</version>
+  	</dependency>
+  </dependencies>
+  <organization>
+    <name>komusubi</name>
+    <url>http://komusubi.dip.jp/</url>
+  </organization>
+  <name>common</name>
+  <url>http://komusubi.dip.jp/site/common</url>
+  <inceptionYear>2011</inceptionYear>
+</project>
