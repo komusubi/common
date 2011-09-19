@@ -59,7 +59,7 @@ public class MailContent {
 	 * @throws ParseException 
 	 */
 	public MailContent() throws ParseException {
-		this(new ContentType("text/plain; iso-2022-jp"), "");
+		this(new ContentType("text/plain; charset=iso-2022-jp"), "");
 	}
 
 	/**

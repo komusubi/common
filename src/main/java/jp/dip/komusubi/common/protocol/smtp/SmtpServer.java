@@ -26,7 +26,6 @@ import org.slf4j.LoggerFactory;
  * @version $Id: SmtpServer.java 1254 2009-07-06 14:35:03Z ozeki $
  */
 public class SmtpServer implements Serializable {
-	/**  */
     private static final long serialVersionUID = 5050401872058525467L;
     private static final Logger logger = LoggerFactory.getLogger(SmtpServer.class);
     
@@ -126,6 +125,9 @@ public class SmtpServer implements Serializable {
 		props.put("mail.smtp.host", getHost());
 		props.put("mail.host", getHost());
 		props.put("mail.smtp.auth", Boolean.toString(isAuth()));
+		
+		props.put("mail.smtp.starttls.enable","true");
+		
 		// HELO, EHLOコマンドで利用する値を設定
 		// ex) EHLO amy.hi-ho.ne.jp
 		props.put("mail.smtp.localhost", getHost());
@@ -165,12 +167,13 @@ public class SmtpServer implements Serializable {
 			transport = session.getTransport("smtp");
 			// SMTP認証不要であればユーザー名、パスワードはnullのままでOKのはず。
 			transport.connect(getHost(), getPort(), getUsername(), getPassword());
-	        transport.sendMessage(message, message.getAllRecipients());
+	       transport.sendMessage(message, message.getAllRecipients());
         } catch (MessagingException e) {
         	throw new jp.dip.komusubi.common.MessagingException(e);
         } finally {
         	try {
-        		if (transport != null && transport.isConnected())
+//        		if (transport != null && transport.isConnected())
+        		if (transport != null)
         			transport.close();
             } catch (MessagingException e) {
             	// ignored.
