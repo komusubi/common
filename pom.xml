@@ -132,4 +132,8 @@
       <url>scp://komusubi.dip.jp:3843/home/sites/komusubi.dip.jp/web/m2/snapshot</url>
     </snapshotRepository>
   </distributionManagement>
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/komusubi/common/issues</url>
+  </issueManagement>
 </project>
