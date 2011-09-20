@@ -46,7 +46,7 @@ public class SmtpServer implements Serializable {
     }
 	/**
 	 * SMTP サーバー名.
-	 * @param name
+	 * @param host
 	 */
 	public void setHost(String host) {
     	this.host = host;
@@ -102,7 +102,7 @@ public class SmtpServer implements Serializable {
     }
 	/**
 	 * 宛先作成。
-	 * @param user 宛先ユーザー
+	 * @param dest 宛先ユーザー
 	 * @param charset 文字コード
 	 * @return 宛先{@link InternetAddress}
 	 */
