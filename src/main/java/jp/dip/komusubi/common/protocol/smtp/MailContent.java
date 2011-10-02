@@ -33,11 +33,7 @@ import javax.mail.internet.ParseException;
  * @version $Id: MailContent.java 1114 2009-04-05 17:17:07Z ozeki $
  */
 public class MailContent {
-	private ContentType contentType;
-	private String body;
-	private String subject;
-
-    public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {
 		System.out.println("path is " + Integer.class.getResource("/META-INF/mimetypes.default")); ///META-INF/mimetypes.default"));
 		System.out.println("current " + MailContent.class.getResource("/META-INF/mime.types"));
 		for (Enumeration<URL> e = MailContent.class.getClassLoader().getResources("META-INF/mimetypes.default"); e.hasMoreElements(); )
@@ -52,7 +48,11 @@ public class MailContent {
 				System.out.println("file: " + file.getAbsolutePath());
 		}
 		System.out.println("path " + Thread.currentThread().getContextClassLoader().getResource("/META-INF/mimetypes.default"));
-    }    
+    }
+	private ContentType contentType;
+	private String body;
+
+    private String subject;    
 
 	/**
 	 * コンストラクタ。
@@ -64,6 +64,14 @@ public class MailContent {
 
 	/**
 	 * コンストラクタ。
+	 * @param aContentType
+	 */
+	public MailContent(ContentType aContentType) {
+		this(aContentType, "");
+	}
+	
+	/**
+	 * コンストラクタ。
 	 * @param aContentType 
 	 * @param aBody
 	 */
@@ -71,30 +79,30 @@ public class MailContent {
 		setContentType(aContentType);
 		setBody(aBody);
 	}
-	
-	/**
-	 * コンストラクタ。
-	 * @param aContentType
-	 */
-	public MailContent(ContentType aContentType) {
-		this(aContentType, "");
-	}
-	public ContentType getContentType() {
-    	return contentType;
-    }
-	public void setContentType(ContentType contentType) {
-    	this.contentType = contentType;
-    }
 	public String getBody() {
     	return body;
     }
-	public void setBody(String body) {
-    	this.body = body;
+
+	public ContentType getContentType() {
+    	return contentType;
     }
 	public String getSubject() {
     	return subject;
     }
+	public void setBody(String body) {
+    	this.body = body;
+    }
+	public void setContentType(ContentType contentType) {
+    	this.contentType = contentType;
+    }
 	public void setSubject(String subject) {
     	this.subject = subject;
     }
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("MailContent [contentType=").append(contentType).append(", body=")
+				.append(body).append(", subject=").append(subject).append("]");
+		return builder.toString();
+	}
 }

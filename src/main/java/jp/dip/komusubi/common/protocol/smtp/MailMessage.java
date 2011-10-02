@@ -64,5 +64,14 @@ public class MailMessage {
 	public void addBccRecipient(Destination dest) {
     	bccRecipients.add(dest);
     }
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("MailMessage [fromUser=").append(fromUser).append(", toRecipients=")
+				.append(toRecipients).append(", ccRecipients=").append(ccRecipients)
+				.append(", bccRecipients=").append(bccRecipients).append(", mailContent=")
+				.append(mailContent).append("]");
+		return builder.toString();
+	}
 	
 }
