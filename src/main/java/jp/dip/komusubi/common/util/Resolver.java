@@ -21,4 +21,5 @@ package jp.dip.komusubi.common.util;
 public interface Resolver<T> {
 
 	T resolve();
+	T resolve(T value);
 }
