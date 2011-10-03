@@ -140,6 +140,7 @@
       <id>komusubi-snapshot</id>
       <name>komusubi snapshot</name>
       <url>scp://komusubi.dip.jp:3843/home/sites/komusubi.dip.jp/web/m2/snapshot</url>
+      <uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
   </distributionManagement>
   <issueManagement>
