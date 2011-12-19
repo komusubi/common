@@ -16,10 +16,18 @@
  * specific language governing permissions and limitations
  * under the License.    
  */
-package jp.dip.komusubi.common.util;
+package org.komusubi.common.protocol.smtp;
 
-public interface Resolver<T> {
 
-	T resolve();
-	T resolve(T value);
+public class AddressException extends SmtpException {
+	private static final long serialVersionUID = 682384012342304401L;
+	
+	public AddressException(Throwable cause) {
+		super(cause);
+	}
+
+	public AddressException(String message, Throwable cause) {
+		super(message, cause);
+	}
+
 }

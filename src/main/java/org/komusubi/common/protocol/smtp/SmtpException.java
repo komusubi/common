@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.    
  */
-package jp.dip.komusubi.common.protocol.smtp;
+package org.komusubi.common.protocol.smtp;
 
 public class SmtpException extends RuntimeException {
 	private static final long serialVersionUID = 2051454387906733589L;

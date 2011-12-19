@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package jp.dip.komusubi.common.protocol.smtp;
+package org.komusubi.common.protocol.smtp;
 
 import java.io.File;
 import java.io.IOException;

@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.    
  */
-package jp.dip.komusubi.common.util;
+package org.komusubi.common.util;
 
 import java.io.IOException;
 import java.io.InputStream;

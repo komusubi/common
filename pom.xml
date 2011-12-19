@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>jp.dip.komusubi</groupId>
+  <groupId>org.komusubi</groupId>
   <artifactId>common</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <dependencies>
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -109,14 +109,14 @@
   </developers>
   <organization>
     <name>komusubi</name>
-    <url>http://komusubi.dip.jp/</url>
+    <url>http://komusubi.org/</url>
   </organization>
   <name>common</name>
   <url>http://komusubi.dip.jp/m2/site/common</url>
   <inceptionYear>2011</inceptionYear>
   <ciManagement>
     <system>jenkins</system>
-    <url>https://komusubi.ci.cloudbees.com/job/common</url>
+    <url>http://komusubi.org/jenkins/job/common</url>
   </ciManagement>
   <scm>
     <url>https://github.com/komusubi/common</url>

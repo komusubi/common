@@ -16,10 +16,24 @@
  * specific language governing permissions and limitations
  * under the License.    
  */
-package jp.dip.komusubi.common.protocol.smtp;
+package org.komusubi.common;
 
-public interface Destination {
+public class UnsupportedEncodingException extends RuntimeException {
+	private static final long serialVersionUID = 3251769487992192231L;
 
-	String getName();
-	String getEmail();
+	public UnsupportedEncodingException(String message, Throwable cause) {
+		super(message, cause);
+		// TODO Auto-generated constructor stub
+	}
+
+	public UnsupportedEncodingException(String message) {
+		super(message);
+		// TODO Auto-generated constructor stub
+	}
+
+	public UnsupportedEncodingException(Throwable cause) {
+		super(cause);
+		// TODO Auto-generated constructor stub
+	}
+
 }

@@ -16,18 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.    
  */
-package jp.dip.komusubi.common;
+package org.komusubi.common.protocol.smtp;
 
-public class MessagingException extends RuntimeException {
-	private static final long serialVersionUID = -513260237592841854L;
+public interface Destination {
 
-	public MessagingException(String message, Throwable cause) {
-		super(message, cause);
-	}
-
-	public MessagingException(Throwable cause) {
-		super(cause);
-	}
-
-
+	String getName();
+	String getEmail();
 }

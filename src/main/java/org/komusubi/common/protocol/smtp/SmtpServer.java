@@ -1,7 +1,7 @@
 /**
  * 
  */
-package jp.dip.komusubi.common.protocol.smtp;
+package org.komusubi.common.protocol.smtp;
 
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
@@ -116,7 +116,7 @@ public class SmtpServer implements Serializable {
         } catch (javax.mail.internet.AddressException e) {
         	throw new AddressException(e);
         } catch (UnsupportedEncodingException e) {
-        	throw new jp.dip.komusubi.common.UnsupportedEncodingException(e);
+        	throw new org.komusubi.common.UnsupportedEncodingException(e);
 		}
 	}
 	
@@ -169,7 +169,7 @@ public class SmtpServer implements Serializable {
 			transport.connect(getHost(), getPort(), getUsername(), getPassword());
 	       transport.sendMessage(message, message.getAllRecipients());
         } catch (MessagingException e) {
-        	throw new jp.dip.komusubi.common.MessagingException(e);
+        	throw new org.komusubi.common.MessagingException(e);
         } finally {
         	try {
 //        		if (transport != null && transport.isConnected())
