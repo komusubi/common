@@ -112,7 +112,7 @@
     <url>http://komusubi.org/</url>
   </organization>
   <name>common</name>
-  <url>http://komusubi.dip.jp/m2/site/common</url>
+  <url>http://komusubi.org/m2/site/common</url>
   <inceptionYear>2011</inceptionYear>
   <ciManagement>
     <system>jenkins</system>
@@ -127,19 +127,19 @@
     <site>
       <id>komusubi-repo</id>
       <name>komusubi vps</name>
-      <url>scp://komusubi.dip.jp:3843/home/sites/komusubi.dip.jp/web/m2/site/common</url>
+      <url>scp://komusubi.org:3843/home/sites/komusubi.org/web/m2/site/common</url>
     </site>
     <repository>
       <uniqueVersion>false</uniqueVersion>
       <id>komusubi-repo</id>
       <name>komusubi vps</name>
-      <url>scp://komusubi.dip.jp:3843/home/sites/komusubi.dip.jp/web/m2/repo</url>
+      <url>scp://komusubi.org:3843/home/sites/komusubi.org/web/m2/repo</url>
       <layout>default</layout>
     </repository>
     <snapshotRepository>
       <id>komusubi-snapshot</id>
       <name>komusubi snapshot</name>
-      <url>scp://komusubi.dip.jp:3843/home/sites/komusubi.dip.jp/web/m2/snapshot</url>
+      <url>scp://komusubi.org:3843/home/sites/komusubi.org/web/m2/snapshot</url>
       <uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
   </distributionManagement>
