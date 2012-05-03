@@ -24,14 +24,14 @@
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
         <artifactId>wagon-ssh</artifactId>
-        <version>1.0</version>
+        <version>2.2</version>
       </extension>
     </extensions>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
-        <version>3.0</version>
+        <version>3.1</version>
         <configuration>
           <locales>ja</locales>
           <inputEncoding>UTF-8</inputEncoding>
@@ -150,19 +150,19 @@
     <site>
       <id>komusubi-repo</id>
       <name>komusubi vps</name>
-      <url>scp://komusubi.org:3843/home/sites/komusubi.org/web/m2/site/common</url>
+      <url>scp://komusubi.org/home/jun/public/m2/sites/common</url>
     </site>
     <repository>
       <uniqueVersion>false</uniqueVersion>
       <id>komusubi-repo</id>
       <name>komusubi vps</name>
-      <url>scp://komusubi.org:3843/home/sites/komusubi.org/web/m2/repo</url>
+      <url>scp://komusubi.org/home/jun/public/m2/repo</url>
       <layout>default</layout>
     </repository>
     <snapshotRepository>
       <id>komusubi-snapshot</id>
       <name>komusubi snapshot</name>
-      <url>scp://komusubi.org:3843/home/sites/komusubi.org/web/m2/snapshot</url>
+      <url>scp://komusubi.org/home/jun/public/m2/snapshot</url>
       <uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
   </distributionManagement>
