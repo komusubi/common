@@ -156,13 +156,13 @@
       <uniqueVersion>false</uniqueVersion>
       <id>komusubi-repo</id>
       <name>komusubi vps</name>
-      <url>scp://komusubi.org/home/jun/public/m2/repo</url>
+      <url>scp://komusubi.org/var/www/m2repo/release</url>
       <layout>default</layout>
     </repository>
     <snapshotRepository>
       <id>komusubi-snapshot</id>
       <name>komusubi snapshot</name>
-      <url>scp://komusubi.org/home/jun/public/m2/snapshot</url>
+      <url>scp://komusubi.org/var/www/m2repo/snapshot</url>
       <uniqueVersion>false</uniqueVersion>
     </snapshotRepository>
   </distributionManagement>
