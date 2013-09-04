@@ -24,7 +24,7 @@
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
         <artifactId>wagon-ssh</artifactId>
-        <version>2.2</version>
+        <version>2.4</version>
       </extension>
     </extensions>
     <plugins>
@@ -150,7 +150,7 @@
     <site>
       <id>komusubi-repo</id>
       <name>komusubi vps</name>
-      <url>scp://komusubi.org/home/jun/public/m2/sites/common</url>
+	  <url>scp://komusubi.org/var/www/html/sites/common</url>
     </site>
     <repository>
       <uniqueVersion>false</uniqueVersion>
