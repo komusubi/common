@@ -1,0 +1,72 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+alias ls='LC_TIME=C ls -F --color=always'
+alias ly='ls --time-style=+"%Y/%m/%d %T" --color=always'
+alias df='df -h'
+alias du='du -h'
+alias vi='vim'
+alias o='gnome-open'
+alias shost='grep Host ~/.ssh/config'
+alias logout='gnome-session-quit'
+alias sync='rsync -avz -e ssh /storage/Music/ silver:./Music/'
+alias r='fc -e -'
+alias b='popd'
+alias p='pushd'
+alias cd='pushd > /dev/null'
+alias l='dirs -l -v'
+alias t='todo'
+alias h='history'
+alias g='git'
+alias gf='git flow'
+alias gt='git for-each-ref --sort=-taggerdate --format="%(taggerdate:short) %(tag)  %(taggername) %(subject)" refs/tags'
+
+# git completion
+DISTRO=""
+[ which lsb_release 2> /dev/null ] && DISTRO=$(lsb_release -i -s) || {
+ [ -f /etc/system-release ] && DISTRO=$(cut -f1 -d' ' /etc/system-release) 
+}
+if [ ${DISTRO} = CentOS ]; then
+  GIT_CONTRIB_DIR=/usr/share/doc/git-core-doc-$(git --version | cut -d' ' -f3)/contrib/completion
+elif [ ${DISTRO} = Amazon ]; then 
+  GIT_CONTRIB_DIR=/usr/share/git-core/contrib/completion
+else
+  GIT_CONTRIB_DIR=/usr/share/doc/git/contrib/completion
+fi
+if [ -d ${GIT_CONTRIB_DIR} ]; then
+  if [ -f ${GIT_CONTRIB_DIR}/git-completion.bash ]; then
+    source ${GIT_CONTRIB_DIR}/git-completion.bash
+  fi
+  if [ -f ${GIT_CONTRIB_DIR}/git-prompt.sh ]; then
+    source ${GIT_CONTRIB_DIR}/git-prompt.sh
+  fi
+else
+  echo "failure git completion configuration in bashrc"
+fi
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWUPSTREAM=auto
+
+SUFFIX='\[\e[0m\]'
+if [[ ${HOSTNAME} =~ black|lenovo ]]; then
+  PREFIX=''
+  SUFFIX=''
+elif [[ ${HOSTNAME} =~ centos70 ]]; then
+  # green
+  PREFIX='\[\e[36m\]'
+elif [[ ${HOSTNAME} =~ stg ]]; then
+  # yellow
+  PREFIX='\[\e[33m\]'
+elif [[ ${HOSTNAME} =~ prd ]]; then
+  # red
+  PREFIX='\[\e[31m\]'
+fi
+export PS1="${PREFIX}"'\u@\h[\t$(__git_ps1 " (\W:%s)")]'"${SUFFIX}"'$ '
