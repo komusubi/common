@@ -18,3 +18,4 @@
 	compactionHeuristic = true
 [include]
 	path = ~/.gitconfig.local
+[dummy line]
