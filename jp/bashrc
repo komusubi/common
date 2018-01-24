@@ -70,3 +70,6 @@ elif [[ ${HOSTNAME} =~ prd ]]; then
   PREFIX='\[\e[31m\]'
 fi
 export PS1="${PREFIX}"'\u@\h[\t$(__git_ps1 " (\W:%s)")]'"${SUFFIX}"'$ '
+test
+test
+test
