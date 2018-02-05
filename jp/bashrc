@@ -70,4 +70,5 @@ elif [[ ${HOSTNAME} =~ prd ]]; then
 fi
 export PS1="${PREFIX}"'\u@\h[\t$(__git_ps1 " (\W:%s)")]'"${SUFFIX}"'$ '
 
-export DUMMY_ENV
+export DUMMY_FIX
+
